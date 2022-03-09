@@ -1,5 +1,4 @@
-function hello(name: string): string {
-  return `Hello, ${name}!`
-}
+import LoggerError from './LoggerError'
+import logger from './logger'
 
-console.log(hello('454545'))
+export { logger as fileLogger, LoggerError }

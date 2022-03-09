@@ -1,0 +1,37 @@
+# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
+
+name: ci
+
+on:
+  push:
+    branches: 
+      - '**'
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2.0.1
+        with:
+          version: 6.15.1
+
+      - name: Set node version to 14
+        uses: actions/setup-node@v2
+        with:
+          # Use version 14 to ensure successful unit testing, need to check why the log file can't be created with version 16
+          node-version: 14 
+          cache: 'pnpm'
+      - run: pnpm install
+
+      - name: Build dev
+        run: pnpm build
+
+      - name: Run unit test
+        run: pnpm test
+
+      - name: Run eslint
+        run: pnpm eslint

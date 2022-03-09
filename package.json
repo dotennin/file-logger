@@ -29,7 +29,8 @@
   },
   "keywords": [
     "file",
-    "logger"
+    "log",
+    "console"
   ],
   "author": "Dotennin",
   "license": "GPL-3.0",
