@@ -4,7 +4,7 @@ import log from 'loglevel'
 let currentDate = new Date()
 const createStream = (date: Date) => {
   return fs.createWriteStream(
-    `${__dirname}/../../logs/${date.toLocaleDateString('en-CA', {
+    `${__dirname}/../logs/${date.toLocaleDateString('en-CA', {
       year: 'numeric',
       month: '2-digit',
       day: '2-digit',

@@ -6,7 +6,7 @@ jest.useFakeTimers('modern')
 jest.setSystemTime(new Date(mockDateString).getTime())
 jest.setTimeout(10000)
 
-const expectedFilePath = `${__dirname}/../../logs/${mockDateString}.log`
+const expectedFilePath = `${__dirname}/../logs/${mockDateString}.log`
 
 const readLogFile = () => {
   return new Promise((resolve) => {
