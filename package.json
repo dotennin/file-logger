@@ -6,11 +6,13 @@
   "scripts": {
     "test": "jest",
     "tsc": "tsc -p tsconfig.build.json",
-    "dev:watch": "npx ts-node-dev --respawn src/index.ts",
+    "watch": "npx ts-node-dev --respawn src/index.ts",
     "clean": "rimraf dist/*",
     "build": "npm-run-all clean tsc",
     "serve": "node dist/index.js",
-    "eslint": "eslint --fix src/*.*"
+    "eslint": "eslint --fix src/*.*",
+    "prepublishOnly": "npm run build",
+    "release": "standard-version"
   },
   "husky": {
     "hooks": {
