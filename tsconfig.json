@@ -8,6 +8,7 @@
     "esModuleInterop": true,
     "lib": ["DOM", "ESNext"],
     "baseUrl": "./",
+    "declaration":true,
     "paths": {
       "*": ["src/@types/*"]
     }
