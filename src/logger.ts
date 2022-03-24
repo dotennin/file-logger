@@ -1,10 +1,11 @@
 import * as fs from 'fs'
 import log from 'loglevel'
+import { __basedir } from './'
 
 let currentDate = new Date()
 const createStream = (date: Date) => {
   return fs.createWriteStream(
-    `${__dirname}/../logs/${date.toLocaleDateString('en-CA', {
+    `${__basedir}/logs/${date.toLocaleDateString('en-CA', {
       year: 'numeric',
       month: '2-digit',
       day: '2-digit',

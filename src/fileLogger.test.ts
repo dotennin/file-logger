@@ -1,12 +1,12 @@
 import fs from 'fs'
-import { fileLogger } from './index'
+import { fileLogger, __basedir } from './index'
 
 const mockDateString = '2999-12-31'
 jest.useFakeTimers('modern')
 jest.setSystemTime(new Date(mockDateString).getTime())
 jest.setTimeout(10000)
 
-const expectedFilePath = `${__dirname}/../logs/${mockDateString}.log`
+const expectedFilePath = `${__basedir}/logs/${mockDateString}.log`
 
 const readLogFile = () => {
   return new Promise((resolve) => {
