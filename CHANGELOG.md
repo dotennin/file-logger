@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/dotennin/nloger/compare/v1.1.0...v1.2.0) (2022-03-24)
+
+
+### Features
+
+* recognite current path automatically ([7c71da4](https://github.com/dotennin/nloger/commit/7c71da46bf0d5e183fd04d7dce53693907eaf9f6))
+
+
+### Bug Fixes
+
+* seprate __bardir for test error ([c06d43e](https://github.com/dotennin/nloger/commit/c06d43ebc342d8c12c69dd55cf94a1297d262e19))
+
 ## 1.1.0 (2022-03-15)
 
 
