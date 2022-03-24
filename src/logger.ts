@@ -1,7 +1,6 @@
 import * as fs from 'fs'
 import log from 'loglevel'
-import { __basedir } from './'
-
+import { __basedir } from './__basedir'
 let currentDate = new Date()
 const createStream = (date: Date) => {
   return fs.createWriteStream(

@@ -1,5 +1,6 @@
 import fs from 'fs'
-import { fileLogger, __basedir } from './index'
+import { fileLogger } from './index'
+import { __basedir } from './__basedir'
 
 const mockDateString = '2999-12-31'
 jest.useFakeTimers('modern')
